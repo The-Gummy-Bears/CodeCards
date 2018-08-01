@@ -20,15 +20,20 @@ class Home extends Component {
 
   }
 
-  // removeCategory = (categoryName) => {
-  //   console.log(categoryName)
-  //   const req = {
-  //     username: localStorage.getItem("username"),
-  //     category: categoryName
-  //   }
-  //   API.deleteCategory(req)
-  //     .then(res => console.log(res));
-  // }
+  removeCategory = (categoryName) => {
+    console.log(categoryName)
+    const req = {
+      username: localStorage.getItem("username"),
+      category: categoryName
+    }
+    API.deleteCategory(req)
+      .then(() => 
+        {API.getUserbyName(localStorage.getItem("username")) 
+          .then(res => {
+            this.setState({ categories: res.data[0].categories});
+        })
+    });
+  }
 
   addCategory = (item) => {
       const newCategories = [...this.state.categories, item];
