@@ -13,3 +13,7 @@ While the original idea of this app was to help students going through a Coding 
 Here is a link to a video walk-through of the app: https://drive.google.com/file/d/1PoQIYA5hB6oFrS4UcaKyOh9vDJ6lHq9N/view 
 
 A deployed version can also be seen at: https://my-code-card.herokuapp.com/
+
+## Project Presentation Slideshow
+
+https://drive.google.com/file/d/1-QiKczd-2wHlBhrMwBe3nokQIg61rhj8/view?usp=sharing
