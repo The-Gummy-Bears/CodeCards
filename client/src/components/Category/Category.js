@@ -28,7 +28,6 @@ class Category extends Component {
     renderCards = () => {
         API.getUserbyName(localStorage.getItem("username"))
             .then(res => {
-                if(res.data[0].levelOne.length !== 0) {
                     let newArr = [];
                     for(let i = 0; i < res.data[0].levelOne.length; i++) {
                         if(res.data[0].levelOne[i].category === this.state.category) {
@@ -38,7 +37,6 @@ class Category extends Component {
                     this.setState({
                         cards: newArr
                 })
-            }
         })
     }
 
@@ -47,9 +45,8 @@ class Category extends Component {
             username: this.state.username,
             card: title
         }
-        console.log(data);
         API.deleteCard(data)
-            .then(this.renderCards());
+            .then(() => this.renderCards());
     }
 
     changeMode = (boolean) => {
