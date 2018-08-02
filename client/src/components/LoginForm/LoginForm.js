@@ -110,7 +110,7 @@ class TextFields extends React.Component {
     handleLogin = () => {
       const passwordToCheck = this.props.password.trim();
       const username = this.props.username.trim();
-      API.getUserbyName(this.props.username).then(res => {
+      API.getUserbyName(username).then(res => {
         if(res.data.length === 0) {
           this.setState({
             modalText: "This user does not exist",

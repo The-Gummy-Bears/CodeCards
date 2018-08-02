@@ -14,8 +14,10 @@ export default {
   addInfoCard: function(cardData) {
     return axios.put("api/users/" + cardData.username + "/addCard", cardData);
   },
-  // deleteCategory: function(data) {
-  //   console.log(data);
-  //   return axios.delete("api/users/" + data.username + "/delete", data);
-  // }
+  deleteCategory: function(data) {
+    return axios.put("api/users/" + data.username + "/delete", data);
+  },
+  deleteCard: function(data) {
+    return axios.put("api/users/" + data.username + "/delete/infoCard", data);
+  }
 };

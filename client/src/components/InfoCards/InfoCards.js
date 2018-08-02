@@ -80,7 +80,7 @@ function SimpleCard(props) {
           </div>
         </CardContent >
         <CardActions>
-          <Button className={classes.button} size="small" color="secondary">Delete</Button>
+          <Button className={classes.button} onClick={() => props.deleteCard(props.title)} size="small" color="secondary">Delete</Button>
         </CardActions>
       </Card>
     </div>
