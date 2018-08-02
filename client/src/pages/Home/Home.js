@@ -21,7 +21,6 @@ class Home extends Component {
   }
 
   removeCategory = (categoryName) => {
-    console.log(categoryName)
     const req = {
       username: localStorage.getItem("username"),
       category: categoryName

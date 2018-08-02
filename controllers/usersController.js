@@ -61,5 +61,13 @@ module.exports = {
       .update({ username: req.body.username }, updateCategories, { multi: true })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  deleteCard: function(req, res) {
+    console.log(req.body);
+    const updateInfoCards = {$pull: { levelOne: { 'card.title': req.body.card }}};
+    db.User
+    .update({ username: req.body.username }, updateInfoCards)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   }
 };

@@ -19,4 +19,8 @@ router
   .route("/:name/delete")
   .put(usersController.deleteCategory);
   
+  router
+  .route("/:name/delete/infoCard")
+  .put(usersController.deleteCard);
+
 module.exports = router;

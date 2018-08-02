@@ -42,6 +42,16 @@ class Category extends Component {
         })
     }
 
+    deleteCard = (title) => {
+        const data = {
+            username: this.state.username,
+            card: title
+        }
+        console.log(data);
+        API.deleteCard(data)
+            .then(this.renderCards());
+    }
+
     changeMode = (boolean) => {
         if(boolean) {
             this.setState({
@@ -63,6 +73,7 @@ class Category extends Component {
                     notes={card.card.notes}
                     link={card.card.link}
                     className={"card"}
+                    deleteCard={this.deleteCard}
                     key = {card.card.title}
                 />
         ))
