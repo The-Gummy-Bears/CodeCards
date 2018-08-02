@@ -95,7 +95,7 @@ class TextFields extends React.Component {
           localStorage.setItem("username", newUser.username);
           localStorage.setItem("isLoggedin", "true");
           this.props.handleLogin();
-          this.props.history.push("/home")
+          this.props.history.push("/")
           }
         )
         .catch(err => console.log(err));
@@ -127,7 +127,7 @@ class TextFields extends React.Component {
           localStorage.setItem("username", username);
           localStorage.setItem("isLoggedin", "true");
           this.props.handleLogin();
-          this.props.history.push("/home");
+          this.props.history.push("/");
         }
       })
       .catch(err => console.log(err)); 

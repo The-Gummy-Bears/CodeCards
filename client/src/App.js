@@ -50,7 +50,7 @@ class App extends React.Component {
                                                           password={this.state.password}
                                                           handleLogin={this.handleLogin}/>}/>
             { localStorage.getItem("isLoggedin") === "true" && 
-            <Route exact path="/home" render={(props) => <Home username={this.state.username} password={this.state.password} />}/>
+            <Route exact path="/" render={(props) => <Home username={this.state.username} password={this.state.password} />}/>
             }
             {localStorage.getItem("isLoggedin") === "true" && 
             <Route exact path="/:category" component={Category}/>
